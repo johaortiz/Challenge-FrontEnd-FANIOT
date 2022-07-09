@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { getAllPokemons } from '../utils/getsFunctions';
+import { getAllPokemons } from '../../utils/getsFunctions';
 import Card from './Card';
-import styles from '../styles/Home.module.css';
-import { Filters } from './Filters'
-import { AppContext } from './Provider/search';
-import Pagination from './Pagination';
-import Loader from './Provider/Loader';
+import styles from '../../styles/module/Home.module.css';
+import { Filters } from '../tools/Filters'
+import { AppContext } from '../../Providers';
+//import Pagination from '../tools/Pagination';
+import logo from '../../assets/logoPokemon.png'
+import Loader from './Loader';
 
 
 
@@ -35,22 +36,27 @@ export default function Home() {
     const [pokemonCurrent, setPokemonCurrent] = useState(pokemons);
 
     useEffect(() => {
-        setPokemonCurrent([...pokemons].splice(0, cards))
+        setPokemonCurrent(pokemons)
     }, [pokemons]);
 
 
 
     return (
-        <div>
-            <Filters pokemonCurrent={pokemonCurrent} setPokemonCurrent={setPokemonCurrent} />
-            <Pagination pokemons={pokemons} setPokemonCurrent={setPokemonCurrent} />
+        <div className={styles.bigBox} >
+            <div>
+            <img src={logo} alt="" className={styles.logoMenu} />
+            <Filters className={styles.select} pokemonCurrent={pokemonCurrent} setPokemonCurrent={setPokemonCurrent}>Pokedex</Filters>
+            </div>
             <ul className={styles.cardsGrid}>
                 {(searchResults.length > 0)
                     ? (searchResults.map(pokemon => { return <Card key={pokemon.id} pokemon={pokemon} /> }))
                     : (pokemonCurrent.length > 0 || pokemonCurrent.name !== undefined)
                         ? pokemonCurrent?.map(pokemon => { return <Card key={pokemon.id} pokemon={pokemon} /> })
-                        : <Loader />}
+                        : <Loader styles={styles} />}
             </ul>
         </div>
     );
 };
+
+
+// <Pagination pokemons={pokemons} setPokemonCurrent={setPokemonCurrent} />

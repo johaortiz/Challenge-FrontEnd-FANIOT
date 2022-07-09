@@ -4,7 +4,7 @@ const webApi = 'https://pokeapi.co/api/v2/pokemon'
 
 export async function getAllPokemons(){
     try {
-        let pokemonsGeneral = await axios.get(`${webApi}?offset=0&limit=200`);
+        let pokemonsGeneral = await axios.get(`${webApi}?offset=0&limit=50`);
         let pokemonsDetailsUrl = pokemonsGeneral.data.results.map(pokemon=>axios.get(pokemon.url));
         let pokemonsDetails = await axios.all(pokemonsDetailsUrl);
         let dataPokemonsDetails = pokemonsDetails.map(pokemon=>pokemon.data);

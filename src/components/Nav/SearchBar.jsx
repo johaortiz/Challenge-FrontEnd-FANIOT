@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { AppContext } from './Provider/search';
-import filter from '../components/Home'
+import { AppContext } from '../../Providers';
+import '../../styles/css/NavBar.css'
 
 export default function SearchBar() {
 
@@ -13,7 +13,7 @@ export default function SearchBar() {
         setPokemonFilter({...pokemonFilter, pokemon: e.target.value});
     }
     return (
-    <div>
+    <div className='divSearch'>
         <input 
         className="form-control inputBuscar"
         value={search}

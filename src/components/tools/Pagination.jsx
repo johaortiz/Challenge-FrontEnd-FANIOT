@@ -24,7 +24,7 @@ export default function Pagination( {pokemons, setPokemonCurrent} ) {
     };
 
   return (
-    <div>
+    <div >
         <button onClick={()=>prev()}>Prev</button>
         <label>{currentPag + 1}</label>
         <button onClick={()=>next()}>Next</button>

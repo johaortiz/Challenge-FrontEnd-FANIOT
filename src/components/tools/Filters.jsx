@@ -1,20 +1,26 @@
-import React, { useContext, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import styles from '../../styles/module/Home.module.css';
 
 export const Filters = ( { pokemonCurrent, setPokemonCurrent} ) => {
 
-    const [event] = useState('');
+    const [event, setEvent] = useState('');
+
 
     const selected = (event)=>{
         const value = event.target.value;
         switch (value) {
             case 'asc':
                 orderAlphabet(value);
+                setEvent(value);
                 break;
             case 'dec':
                 orderAlphabet(value);
+                setEvent(value);
                 break
             case 'id':
                 orderAlphabet(value);
+                setEvent(value);
+                break;
             default:
                 break;
         };
@@ -43,14 +49,14 @@ export const Filters = ( { pokemonCurrent, setPokemonCurrent} ) => {
     };
 
     return (
-        <>
+        <div className={styles.box} > 
             <select value={event} onChange={selected} name="Filters" >
-                <option value="default">Order By</option>
                 <option value="id">Id</option>
                 <option value="asc">A-Z</option>
                 <option value="dec">Z-A</option>
             </select>
-        </>
+            <span className={styles.customArrorw} ></span>
+        </div>
     )
 }
 

@@ -1,0 +1,64 @@
+.bigBox{
+    margin-top: 100px;
+}
+
+.cardsGrid{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 100px;
+}
+
+.logoMenu{
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 10rem;
+}
+
+
+/*IMPORTED IN FILTER*/
+.box{
+    text-align: right;
+    position: relative;
+    margin-right: 3em;
+}
+
+select{
+
+    font-size: 1rem;
+    padding: 0.4em 1em 0.4em;
+    background: #4d5061;
+    color: white;
+    border: 0;
+    margin-right: 30px;
+}
+
+
+.customArrorw{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: block;
+    background: #4d5061;
+    height: 100%;
+    width: 3rem;
+    pointer-events: none;
+    margin-right: 1px;
+    border-radius: 2rem;
+}
+
+/* @media only screen and (max-width: 650px) { 
+    .cardsGrid{
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    .cardsGrid{
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr));
+    }
+} */

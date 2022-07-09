@@ -1,13 +1,15 @@
 .detailsContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    max-height: 100vmax;
   }
   
   .columns{
       max-width: 400px;
       height: auto;
-      height: 80%;
+      height: 18rem;
       margin: 1.3rem;
   }
   
@@ -16,6 +18,6 @@
   }
   
   .text{
-      font-size: 1.3rem;
+      font-size: 1.9rem;
   }
   

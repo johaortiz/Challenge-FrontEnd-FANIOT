@@ -1,0 +1,15 @@
+.notFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.textNotFound {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Quicksand", sans-serif;
+}

@@ -1,6 +1,6 @@
 import {createContext,useState} from 'react';
 
-const Search = ({ children }) =>{
+const Provider = ({ children }) =>{
     const [state,setState] = useState({});
     return (            
             <AppContext.Provider value={[state,setState]}>
@@ -9,5 +9,5 @@ const Search = ({ children }) =>{
     );
 }
 
-export default Search;
+export default Provider;
 export const AppContext = createContext();

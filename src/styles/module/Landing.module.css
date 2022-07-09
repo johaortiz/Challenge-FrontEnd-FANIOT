@@ -1,0 +1,32 @@
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    min-height: calc(114vh - 88px);
+    background-color: black;
+    height: 800px;
+    background-size: 100% 100%;
+}
+
+
+
+.btn {
+	background: rgba(217, 30, 24, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    margin: -37px 1px;
+    padding: 33px 14px;
+    width: 118px;
+
+	
+}
+
+.btn:hover,
+.btn:focus {
+		box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(217, 30, 24, 1);
+	}
